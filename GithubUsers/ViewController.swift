@@ -41,8 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		var cellId = indexPath.section == 0 ? ViewController.userCellId : ViewController.progressCellId
-		cellId = ViewController.userCellId
+		let cellId = indexPath.section == 0 ? ViewController.userCellId : ViewController.progressCellId
 		
 		let result = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
 		if let userCell = result as? UserTableViewCell {

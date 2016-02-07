@@ -72,6 +72,23 @@
                                             <outlet property="usernameLabel" destination="RNs-KM-sOY" id="skN-Rg-PC5"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProgressTableViewCell" id="nHH-aS-x63">
+                                        <rect key="frame" x="0.0" y="72" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nHH-aS-x63" id="2az-y3-GzR">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ZfC-1s-twm">
+                                                    <rect key="frame" x="270" y="11" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZfC-1s-twm" firstAttribute="centerY" secondItem="2az-y3-GzR" secondAttribute="centerY" id="HLf-Za-aAQ"/>
+                                                <constraint firstItem="ZfC-1s-twm" firstAttribute="centerX" secondItem="2az-y3-GzR" secondAttribute="centerX" id="VHU-vm-oPN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Tmo-9u-x47"/>
