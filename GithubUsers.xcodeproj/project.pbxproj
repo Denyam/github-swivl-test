@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39B8B3051C65F85400B6D175 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B8B3041C65F85400B6D175 /* User.swift */; };
 		39C75C891C649CB900D39D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C75C881C649CB900D39D49 /* AppDelegate.swift */; };
 		39C75C8B1C649CB900D39D49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C75C8A1C649CB900D39D49 /* ViewController.swift */; };
 		39C75C8E1C649CB900D39D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C75C8C1C649CB900D39D49 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		174159BB89CFAC4B627F3BFE /* Pods-GithubUsers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUsers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubUsers/Pods-GithubUsers.debug.xcconfig"; sourceTree = "<group>"; };
+		39B8B3041C65F85400B6D175 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		39C75C851C649CB900D39D49 /* GithubUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C75C881C649CB900D39D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39C75C8A1C649CB900D39D49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		394E65871C65832300F6233F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39B8B3041C65F85400B6D175 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		39C75C7C1C649CB900D39D49 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 		39C75C871C649CB900D39D49 /* GithubUsers */ = {
 			isa = PBXGroup;
 			children = (
+				394E65871C65832300F6233F /* Model */,
 				39C75C881C649CB900D39D49 /* AppDelegate.swift */,
 				39C75C8A1C649CB900D39D49 /* ViewController.swift */,
 				39C75C8C1C649CB900D39D49 /* Main.storyboard */,
@@ -212,6 +223,7 @@
 			files = (
 				39C75C8B1C649CB900D39D49 /* ViewController.swift in Sources */,
 				39C75C891C649CB900D39D49 /* AppDelegate.swift in Sources */,
+				39B8B3051C65F85400B6D175 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
