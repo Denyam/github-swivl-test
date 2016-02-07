@@ -9,7 +9,11 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {	
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UserTableViewCellDelegate {
+	static private let userCellId = "UserTableViewCell"
+	static private let progressCellId = "ProgressTableViewCell"
+	static private let showAvatarSegueId = "showAvatar"
+	
 	@IBOutlet weak var tableView: UITableView?
 	
 	private var users = [User]()
@@ -37,16 +41,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cellId = "UserTableViewCell"
+		var cellId = indexPath.section == 0 ? ViewController.userCellId : ViewController.progressCellId
+		cellId = ViewController.userCellId
 		
 		let result = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
-		
-		if indexPath.section == 0 {
-			result.textLabel?.text = self.users[indexPath.row].login
-			result.imageView?.image = nil
-			ImageFetch.instance.getImageForUrl(self.users[indexPath.row].avatarUrl) { (image: UIImage?) -> () in
-				result.imageView?.image = image
-				result.setNeedsLayout()
+		if let userCell = result as? UserTableViewCell {
+			if indexPath.section == 0 {
+				userCell.delegate = self
+				userCell.usernameLabel?.text = self.users[indexPath.row].login
+				userCell.setProfileLink(self.users[indexPath.row].profileUrl)
+				userCell.avatarButton?.setImage(nil, forState: .Normal)
+				ImageFetch.instance.getImageForUrl(self.users[indexPath.row].avatarUrl) { (image: UIImage?) -> () in
+					userCell.avatarButton?.setImage(image, forState: .Normal)
+				}
 			}
 		}
 		
@@ -76,6 +83,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 					self.tableView?.reloadData()
 				}
 			}
+		}
+	}
+	
+	func userTableViewCellShowAvatar(cell: UserTableViewCell) {
+		if let avatarImage = cell.avatarButton?.imageForState(.Normal){
+			if let avatarVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AvatarViewController") as? AvatarViewController {
+				avatarVC.image = avatarImage
+				avatarVC.title = cell.usernameLabel?.text
+				
+				self.presentViewController(avatarVC, animated: true, completion: nil)
+			}
+
 		}
 	}
 }
