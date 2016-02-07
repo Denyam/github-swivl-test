@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		399690311C669E4E00D3B8F0 /* ImageFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399690301C669E4E00D3B8F0 /* ImageFetch.swift */; };
 		39B8B3051C65F85400B6D175 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B8B3041C65F85400B6D175 /* User.swift */; };
 		39B8B3071C6613B500B6D175 /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B8B3061C6613B500B6D175 /* GithubRequest.swift */; };
 		39C75C891C649CB900D39D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C75C881C649CB900D39D49 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		174159BB89CFAC4B627F3BFE /* Pods-GithubUsers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUsers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubUsers/Pods-GithubUsers.debug.xcconfig"; sourceTree = "<group>"; };
+		399690301C669E4E00D3B8F0 /* ImageFetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetch.swift; sourceTree = "<group>"; };
 		39B8B3041C65F85400B6D175 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		39B8B3061C6613B500B6D175 /* GithubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
 		39C75C851C649CB900D39D49 /* GithubUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,7 @@
 			children = (
 				39B8B3041C65F85400B6D175 /* User.swift */,
 				39B8B3061C6613B500B6D175 /* GithubRequest.swift */,
+				399690301C669E4E00D3B8F0 /* ImageFetch.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				39C75C8B1C649CB900D39D49 /* ViewController.swift in Sources */,
 				39B8B3071C6613B500B6D175 /* GithubRequest.swift in Sources */,
 				39C75C891C649CB900D39D49 /* AppDelegate.swift in Sources */,
+				399690311C669E4E00D3B8F0 /* ImageFetch.swift in Sources */,
 				39B8B3051C65F85400B6D175 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
